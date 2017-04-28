@@ -1,6 +1,6 @@
 package com.fw.olauberintegration.api.resources;
 
-import com.fw.olauberintegration.api.request.uberrideestimate.olarideestimate.UberRideEstimateResponseData;
+import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateResponseData;
 
 import java.util.Map;
 

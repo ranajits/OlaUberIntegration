@@ -27,7 +27,7 @@ import com.fw.olauberintegration.api.request.base.BasicResponseData;
 import com.fw.olauberintegration.api.request.base.ErrorResponseData;
 import com.fw.olauberintegration.api.request.base.Request;
 import com.fw.olauberintegration.api.request.olarideestimate.OlaRideEstimateResponseData;
-import com.fw.olauberintegration.api.request.uberrideestimate.olarideestimate.UberRideEstimateResponseData;
+import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateResponseData;
 import com.fw.olauberintegration.fragment.OlaRideFragment;
 import com.fw.olauberintegration.fragment.UberRideFragment;
 import com.fw.olauberintegration.model.OlaRideEstimate;

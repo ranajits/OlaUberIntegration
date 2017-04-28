@@ -7,9 +7,9 @@ import com.fw.olauberintegration.api.request.base.Request;
 import com.fw.olauberintegration.api.request.olarideestimate.OlaRideEstimateRequest;
 import com.fw.olauberintegration.api.request.olarideestimate.OlaRideEstimateRequestData;
 import com.fw.olauberintegration.api.request.olarideestimate.OlaRideEstimateResponseData;
-import com.fw.olauberintegration.api.request.uberrideestimate.olarideestimate.UberRideEstimateRequest;
-import com.fw.olauberintegration.api.request.uberrideestimate.olarideestimate.UberRideEstimateRequestData;
-import com.fw.olauberintegration.api.request.uberrideestimate.olarideestimate.UberRideEstimateResponseData;
+import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateRequest;
+import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateRequestData;
+import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateResponseData;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
