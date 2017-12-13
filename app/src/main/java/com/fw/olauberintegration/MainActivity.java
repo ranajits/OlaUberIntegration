@@ -1,7 +1,9 @@
 package com.fw.olauberintegration;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,8 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -18,15 +18,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
-import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.fw.olauberintegration.api.ApiRequestHandler;
-import com.fw.olauberintegration.api.request.base.BasicResponseData;
 import com.fw.olauberintegration.api.request.base.ErrorResponseData;
 import com.fw.olauberintegration.api.request.base.Request;
-import com.fw.olauberintegration.api.request.olarideestimate.OlaRideEstimateResponseData;
 import com.fw.olauberintegration.api.request.uberrideestimate.UberRideEstimateResponseData;
 import com.fw.olauberintegration.fragment.OlaRideFragment;
 import com.fw.olauberintegration.fragment.UberRideFragment;
@@ -124,7 +120,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     @OnClick({R.id.btnSubmit})
     public void submitLocation(){
-        ApiRequestHandler.fetchAllOlaRideEstimate(pickLatLng, dropLatLng, "",new Request.RequestDelegate<OlaRideEstimateResponseData>() {
+
+
+        LatLng fromPosition = pickLatLng;
+        LatLng toPosition = dropLatLng;
+
+        Bundle args = new Bundle();
+        args.putParcelable("from_position", fromPosition);
+        args.putParcelable("to_position", toPosition);
+
+        startActivity(new Intent(MainActivity.this, ShowRouteActivity.class).putExtra("bundle", args));
+
+        /*ApiRequestHandler.fetchAllOlaRideEstimate(pickLatLng, dropLatLng, "",new Request.RequestDelegate<OlaRideEstimateResponseData>() {
             @Override
             public void onSuccess(OlaRideEstimateResponseData result) {
                 Log.e("Ola Estimate", result.getRideEstimateList().size()+"");
@@ -141,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             public void onFailed(Throwable t) {
 
             }
-        });
+        });*/
     }
 
     private void fetchUberEstimates(){

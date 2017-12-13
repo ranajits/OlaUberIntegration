@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">OlaUberIntegration</string>
     <string name="places_api_key">AIzaSyDUD_hWcWMj9QXiHrKbnXqaAvYc95e61Js</string>
+    <string name="google_api_key">AIzaSyCL-IwsrZJkdByH_rOASnxs5UxfmWBJ9EE</string>
+
 
     <string name="rupee_symbol">₹</string>
 </resources>
